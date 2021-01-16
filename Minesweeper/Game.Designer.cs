@@ -63,6 +63,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Game";
 			this.Text = "Form1";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
 			this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
 			this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Game_MouseDoubleClick);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Game_MouseDown);

@@ -348,7 +348,7 @@ namespace Minesweeper
 			drawX += component.Width - 5;
 			e.Graphics.DrawImage(component, drawX, drawY);
 			drawY -= component.Height + 6;
-			  
+
 			/**
 			 * Draw left edge of the interface.
 			 */
@@ -578,10 +578,10 @@ namespace Minesweeper
 								selectedTile = null;
 							}
 						}
-						else if (selectedTile != null && selectedTile.Selected) 
+						else if (selectedTile != null && selectedTile.Selected)
 						{
-								selectedTile.Selected = false;
-								selectedTile = null;
+							selectedTile.Selected = false;
+							selectedTile = null;
 						}
 					}
 					else if (selectedTile != null && selectedTile.Selected)
@@ -683,6 +683,11 @@ namespace Minesweeper
 				}
 			}
 		}
+
+		private void Game_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			timerShutdown = true;
+		}
 	}
 
 	public enum Face
@@ -692,6 +697,5 @@ namespace Minesweeper
 		Ooh,
 		Dead,
 		Win
-
 	}
 }
